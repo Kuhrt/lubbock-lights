@@ -1,0 +1,112 @@
+header.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: $page-margin $page-margin 2rem;
+  z-index: 2;
+
+  nav {
+    position: relative;
+    display: block;
+    background-color: $red;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0 $page-margin;
+    border-radius: 50%;
+    z-index: 100;
+
+    & > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 2rem;
+    }
+
+    #menu-main-menu {
+      display: none;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        text-align: center;
+
+        a {
+          color: $white;
+          font-family: $font-levato;
+          font-size: 2.75rem;
+          font-weight: 700;
+          letter-spacing: 0.004rem;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .brand {
+    color: $black;
+    font-family: $font-avenir;
+    font-size: 0.938rem;
+    font-weight: 700;
+    letter-spacing: 0.114rem;
+    line-height: 0.898rem;
+    text-decoration: none;
+    margin-left: 0.5rem;
+
+    span {
+      display: block;
+      color: #7d7d7d;
+      font-family: $font-levato;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.03rem;
+      margin-top: 0.125rem;
+    }
+  }
+
+  .hamburger {
+    position: absolute;
+    right: $page-margin;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+      display: block;
+      background-color: $black;
+      width: 1.5rem;
+      height: 0.25rem;
+      margin: 0.25rem auto;
+      transition: all 0.3s ease-in-out;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &.is-active {
+      span {
+        background-color: $white;
+        margin: 0.5rem auto;
+
+        &:nth-child(1) {
+          transform: translateY(0.75rem) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(-0.75rem) rotate(-45deg);
+        }
+      }
+    }
+  }
+}

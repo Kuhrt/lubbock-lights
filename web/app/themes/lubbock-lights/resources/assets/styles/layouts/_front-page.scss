@@ -1,0 +1,17 @@
+.home__title {
+  position: relative;
+  display: inline-block;
+  margin-left: $page-margin;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    left: calc(100% + 1rem);
+    background-color: $red;
+    width: 95%;
+    height: 0.25rem;
+  }
+}
