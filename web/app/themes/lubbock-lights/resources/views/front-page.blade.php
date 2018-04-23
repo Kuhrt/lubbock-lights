@@ -13,9 +13,87 @@
     {!! get_search_form(false) !!}
   @endif
 
-  @while (have_posts()) @php the_post() @endphp
-    @include('partials.content-'.get_post_type())
-  @endwhile
+  <!-- FEATURE STORY -->
+  @php
+		$args = array(
+			'post_type' => 'post',
+      'category_name' => 'feature',
+			'posts_per_page' => 1
+		);
+		$the_query = new WP_Query( $args );
+	@endphp
+  @if (have_posts())
+    @while ($the_query->have_posts())
+      @php $the_query->the_post() @endphp
+      @include('partials.content-feature')
+    @endwhile
+  @endif
+  @php wp_reset_query() @endphp
+
+  <!-- LATEST STORIES -->
+  <section class="home__latest">
+  @php
+    $featureCategoryID = get_cat_ID( 'feature' );
+    $rantsCategoryID = get_cat_ID( 'rants' );
+    $snowflakeCategoryID = get_cat_ID( 'Stupid Snowflake' );
+		$args = array(
+			'post_type' => 'post',
+      'category__not_in' => array( $featureCategoryID, $rantsCategoryID, $snowflakeCategoryID ),
+			'posts_per_page' => 5
+		);
+		$the_query = new WP_Query( $args );
+	@endphp
+  @if (have_posts())
+    @while ($the_query->have_posts())
+      @php $the_query->the_post() @endphp
+      @include('partials.content-'.get_post_type())
+    @endwhile
+  @endif
+  @php wp_reset_query() @endphp
+  </section>
+
+  <!-- NEWS RSS -->
+  <section class="home__news">
+    <h1>News</h1>
+    @php dynamic_sidebar('sidebar-home-news') @endphp
+  </section>
+
+  <!-- RECENT STORIES -->
+  <section class="home__recent">
+    <h1 class="home__title">Recent Stuff</h1>
+    @php
+  		$args = array(
+  			'post_type' => 'post',
+        'category_name' => 'stupid-snowflake',
+  			'posts_per_page' => 1
+  		);
+  		$the_query = new WP_Query( $args );
+  	@endphp
+    @if (have_posts())
+      @while ($the_query->have_posts())
+        @php $the_query->the_post() @endphp
+        @include('partials.content-feature')
+      @endwhile
+    @endif
+    @php wp_reset_query() @endphp
+
+    @php
+  		$args = array(
+  			'post_type' => 'post',
+        'category_name' => 'rants',
+        'category__not_in' => array( $snowflakeCategoryID ),
+  			'posts_per_page' => 2
+  		);
+  		$the_query = new WP_Query( $args );
+  	@endphp
+    @if (have_posts())
+      @while ($the_query->have_posts())
+        @php $the_query->the_post() @endphp
+        @include('partials.content-'.get_post_type())
+      @endwhile
+    @endif
+    @php wp_reset_query() @endphp
+  </section>
 
   {!! get_the_posts_navigation() !!}
 @endsection

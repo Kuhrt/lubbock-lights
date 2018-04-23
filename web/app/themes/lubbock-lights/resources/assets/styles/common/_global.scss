@@ -39,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #1b1b1b;
+  color: $black;
   font-family: $font-levato;
   font-weight: 700;
 }
@@ -47,7 +47,19 @@ h6 {
 h1 {
   font-size: 2.25rem;
   letter-spacing: 0.003rem;
-  line-height: 2.231rem;
+  line-height: 2.25rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.074rem;
+  margin: 1.5rem 0 1.125rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  letter-spacing: 0.062rem;
+  margin: 1.5rem 0 1.125rem;
 }
 
 p {
@@ -57,8 +69,71 @@ p {
   font-weight: 400;
   letter-spacing: 0.062rem;
   line-height: 1.875rem;
+
+  &.author {
+    color: #4b4b4b;
+    font-family: $font-levato;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.041rem;
+    line-height: 1;
+    margin: 0.5rem 0;
+  }
+
+  &.entry-category {
+    display: inline-block;
+    position: relative;
+    color: $black;
+    font-family: $font-avenir;
+    font-size: 0.688rem;
+    font-weight: 700;
+    letter-spacing: 0.179rem;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $red;
+      width: 100%;
+      height: 0.25rem;
+    }
+  }
+}
+
+blockquote {
+  position: relative;
+  text-align: right;
+  padding: 0 $page-margin 1.5rem 0;
+  margin: 0 $page-margin;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: $red;
+    width: 12.625rem;
+    height: 0.5rem;
+  }
+
+  p {
+    font-family: $font-avenir;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.069rem;
+    line-height: 2.438rem;
+    padding-top: 0 !important;
+    margin: 0 !important;
+  }
 }
 
 .content {
   overflow-x: hidden;
 }
+
+@import "global/article";
+@import "global/feature-article";

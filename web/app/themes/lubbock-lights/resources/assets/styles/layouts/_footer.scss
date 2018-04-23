@@ -2,7 +2,6 @@ footer {
   position: relative;
   background-color: $black;
   padding-top: 1.75rem;
-  margin-top: 5rem;
   overflow-x: hidden;
 
   img {
@@ -29,6 +28,26 @@ footer {
       }
     }
 
+    section.widget_custom_html {
+      div {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        a {
+          margin-right: 1.25rem;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          img {
+            width: 2rem;
+          }
+        }
+      }
+    }
+
     h3 {
       color: $white;
       font-family: $font-avenir;
@@ -37,6 +56,8 @@ footer {
       letter-spacing: 0.135rem;
       line-height: 1.064rem;
       max-width: 8rem;
+      margin-right: 0;
+      margin-left: 0;
     }
 
     p {

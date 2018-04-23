@@ -1,0 +1,19 @@
+body.single-post {
+  article {
+    header {
+      padding-right: $page-margin;
+      padding-left: $page-margin;
+    }
+
+    .entry-content {
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        padding-right: $page-margin;
+        padding-left: $page-margin;
+      }
+    }
+  }
+}

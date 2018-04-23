@@ -86,6 +86,10 @@ add_action('widgets_init', function () {
         'name'          => __('Footer', 'sage'),
         'id'            => 'sidebar-footer'
     ] + $config);
+    register_sidebar([
+        'name'          => __('Home News', 'sage'),
+        'id'            => 'sidebar-home-news'
+    ] + $config);
 });
 
 /**

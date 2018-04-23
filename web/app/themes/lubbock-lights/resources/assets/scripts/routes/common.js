@@ -1,9 +1,7 @@
 export default {
   init() {
     // JavaScript to be fired on all pages
-    console.log('Firing');
     $(".banner .hamburger").click(function(){
-      console.log('Clicked!');
       $(this).toggleClass("is-active");
     });
   },

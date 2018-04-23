@@ -1,0 +1,25 @@
+body.home {
+  article.section-feature {
+    position: relative;
+    padding: 0;
+    margin-bottom: 3.625rem;
+
+    p {
+      &.entry-category {
+        margin: 0 $page-margin 0.5rem;
+      }
+
+      &.author {
+        margin: 0.5rem $page-margin;
+      }
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: 0.003rem;
+      line-height: 2.25rem;
+      margin: 0.5rem $page-margin;
+    }
+  }
+}
