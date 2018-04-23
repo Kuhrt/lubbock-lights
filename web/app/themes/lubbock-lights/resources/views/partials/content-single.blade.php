@@ -4,6 +4,7 @@
     @include('partials/entry-meta')
   </header>
   <div class="entry-content">
+    @php the_post_thumbnail( 'full' ) @endphp
     @php the_content() @endphp
   </div>
   <footer>
