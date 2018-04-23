@@ -18,6 +18,10 @@ body.home {
           z-index: 1;
         }
       }
+
+      .entry-subtitle {
+        display: flex;
+      }
     }
 
     .entry-image {
@@ -29,15 +33,39 @@ body.home {
       width: 100%;
       height: 17rem;
       margin-bottom: 1rem;
+
+      @media (min-width: $breakpoint-tablet) {
+        height: 27rem;
+      }
+    }
+
+    .entry-subtitle {
+      display: none;
+
+      p {
+        margin: 0 0.5rem 0 $page-margin;
+
+        @media (min-width: $breakpoint-tablet) {
+          margin: 0 0.5rem 0 $page-margin-tablet;
+        }
+      }
     }
 
     p {
       &.entry-category {
         margin: 0 $page-margin 0.5rem;
+
+        @media (min-width: $breakpoint-tablet) {
+          margin: 0 $page-margin-tablet 0.5rem;
+        }
       }
 
       &.author {
         margin: 0.5rem $page-margin;
+
+        @media (min-width: $breakpoint-tablet) {
+          margin: 0.5rem $page-margin-tablet;
+        }
       }
     }
 
@@ -47,6 +75,10 @@ body.home {
       letter-spacing: 0.003rem;
       line-height: 2.25rem;
       margin: 0.5rem $page-margin;
+
+      @media (min-width: $breakpoint-tablet) {
+        margin: 0.5rem $page-margin-tablet;
+      }
     }
   }
 }

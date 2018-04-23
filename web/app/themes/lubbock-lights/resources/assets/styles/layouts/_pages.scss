@@ -1,0 +1,14 @@
+.page-content {
+  padding: 0 $page-margin 1rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 0 $page-margin-tablet 2rem;
+  }
+
+  blockquote {
+    @media (min-width: $breakpoint-tablet) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}

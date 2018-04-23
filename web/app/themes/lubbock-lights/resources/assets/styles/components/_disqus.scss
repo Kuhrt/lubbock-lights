@@ -1,3 +1,7 @@
 #disqus_thread {
   padding: 4rem $page-margin;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 4rem $page-margin-tablet;
+  }
 }

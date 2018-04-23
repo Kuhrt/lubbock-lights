@@ -3,6 +3,11 @@ body.single-post {
     header {
       padding-right: $page-margin;
       padding-left: $page-margin;
+
+      @media (min-width: $breakpoint-tablet) {
+        padding-right: $page-margin-tablet;
+        padding-left: $page-margin-tablet;
+      }
     }
 
     .entry-content {
@@ -13,6 +18,11 @@ body.single-post {
       h6 {
         padding-right: $page-margin;
         padding-left: $page-margin;
+
+        @media (min-width: $breakpoint-tablet) {
+          padding-right: $page-margin-tablet;
+          padding-left: $page-margin-tablet;
+        }
       }
     }
   }

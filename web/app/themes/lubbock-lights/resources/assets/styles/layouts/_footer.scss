@@ -20,6 +20,10 @@ footer {
     margin-top: -1rem;
     z-index: 2;
 
+    @media (min-width: $breakpoint-tablet) {
+      padding: 0 $page-margin-tablet 2.5rem;
+    }
+
     & > section {
       width: 50%;
 
@@ -43,6 +47,14 @@ footer {
 
           img {
             width: 2rem;
+
+            @media (min-width: $breakpoint-tablet) {
+              width: 2.8125rem;
+            }
+
+            @media (min-width: $breakpoint-desktop) {
+              width: 3.625rem;
+            }
           }
         }
       }
@@ -58,6 +70,18 @@ footer {
       max-width: 8rem;
       margin-right: 0;
       margin-left: 0;
+
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 1.6875rem;
+        letter-spacing: 0.2025rem;
+        line-height: 1.5965rem;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        font-size: 2.25rem;
+        letter-spacing: 0.27rem;
+        line-height: 2.129rem;
+      }
     }
 
     p {
@@ -67,6 +91,16 @@ footer {
       font-weight: 400;
       line-height: 0.859rem;
       opacity: 0.4;
+
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 1.063rem;
+        line-height: 1.289rem;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        font-size: 1.438rem;
+        line-height: 1.719rem;
+      }
 
       a {
         color: $white;

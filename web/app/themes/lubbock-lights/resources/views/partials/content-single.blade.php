@@ -1,5 +1,9 @@
 <article @php post_class() @endphp>
   <header>
+    <div class="entry-subtitle">
+      <p>Reagor on Raiders</p>
+      <div class="entry-subtitle__image"></div>
+    </div>
     <h1 class="entry-title">{{ get_the_title() }}</h1>
     @include('partials/entry-meta')
   </header>

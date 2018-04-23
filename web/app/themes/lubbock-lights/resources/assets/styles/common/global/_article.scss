@@ -1,6 +1,56 @@
 article {
+  &.category-feature {
+    header {
+      .entry-subtitle {
+        display: flex;
+      }
+    }
+  }
+
   header {
     padding: 0 0 1.5rem;
+
+    .entry-subtitle {
+      position: relative;
+      display: none;
+      justify-content: flex-start;
+      align-items: center;
+
+      p {
+        color: $black;
+        font-family: $font-avenir;
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: 0.15rem;
+        line-height: 1.631rem;
+        text-transform: uppercase;
+        margin: 0 0.5rem 0 0;
+      }
+
+      .entry-subtitle__image {
+        position: relative;
+        background-color: $red;
+        border-radius: 50%;
+        width: 1.875rem;
+        height: 1.875rem;
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: url('../images/guns-up.svg') center no-repeat;
+          width: 75%;
+          height: 75%;
+        }
+      }
+
+      & + h1 {
+        margin-top: 0.25rem;
+      }
+    }
 
     h1 {
       margin-bottom: 0;
@@ -43,6 +93,10 @@ article {
     p {
       margin: 1.875rem $page-margin;
 
+      @media (min-width: $breakpoint-tablet) {
+        margin: 1.875rem $page-margin-tablet;
+      }
+
       &:first-child {
         padding-top: 2.375rem;
         margin-top: 0;
@@ -68,6 +122,10 @@ body.home {
   article.post {
     padding: 0 $page-margin;
     margin: 0 0 4.5rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding: 0 $page-margin-tablet;
+    }
 
     img {
       position: relative;
