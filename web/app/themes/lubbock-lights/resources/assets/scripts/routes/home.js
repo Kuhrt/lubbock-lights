@@ -16,5 +16,20 @@ export default {
         arrows: false,
       });
     }
+
+    $(window).on('resize', function() {
+      if ($(window).width() < 1200 && !$('.home__news').hasClass('slick-initialized')) {
+        $('.home__news').slick({
+          slide: 'section',
+          rows: 0,
+          autoplay: true,
+          autoplaySpeed: 6000,
+          dots: false,
+          arrows: false,
+        });
+      } else if ($(window).width() >= 1200 && $('.home__news').hasClass('slick-initialized')) {
+        $('.home__news').slick('unslick');
+      }
+    });
   },
 };
