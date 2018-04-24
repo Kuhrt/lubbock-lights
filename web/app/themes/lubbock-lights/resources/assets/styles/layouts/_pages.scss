@@ -1,14 +1,44 @@
-.page-content {
-  padding: 0 $page-margin 1rem;
+body.page {
+  main.main {
+    @media (min-width: $breakpoint-desktop) {
+      margin: 0 $page-margin-desktop;
+    }
 
-  @media (min-width: $breakpoint-tablet) {
-    padding: 0 $page-margin-tablet 2rem;
+    @media (min-width: $breakpoint-desktop-med) {
+      max-width: 1440px;
+      margin: 0 auto;
+      overflow-x: hidden;
+    }
+
+    @media (min-width: $breakpoint-desktop-xl) {
+      max-width: 1800px;
+    }
   }
 
-  blockquote {
+  h1 {
+    @media (min-width: $breakpoint-desktop) {
+      margin-left: 5.875rem;
+    }
+  }
+
+  .page-content {
+    padding: 0 $page-margin 1rem;
+
     @media (min-width: $breakpoint-tablet) {
-      margin-right: 0;
-      margin-left: 0;
+      padding: 0 $page-margin-tablet 2rem;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      background-color: $white;
+      padding: 1rem $page-margin-desktop 2rem 5.875rem;
+      margin-bottom: 4rem;
+    }
+
+    blockquote {
+      @media (min-width: $breakpoint-tablet) {
+        margin-right: 0;
+        margin-left: 0;
+      }
     }
   }
 }

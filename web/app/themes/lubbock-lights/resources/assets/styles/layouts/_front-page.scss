@@ -1,3 +1,17 @@
+body.home {
+  main.main {
+    @media (min-width: $breakpoint-desktop-med) {
+      max-width: 1440px;
+      margin: 0 auto;
+      overflow-x: hidden;
+    }
+
+    @media (min-width: $breakpoint-desktop-xl) {
+      max-width: 1800px;
+    }
+  }
+}
+
 .home__title {
   position: relative;
   display: inline-block;
@@ -5,6 +19,14 @@
 
   @media (min-width: $breakpoint-tablet) {
     margin-left: $page-margin-tablet;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-left: $page-margin-desktop;
+  }
+
+  @media (min-width: $breakpoint-desktop-med) {
+    margin-left: 0;
   }
 
   &::after {
@@ -22,6 +44,78 @@
       width: 400%;
       height: 0.4375rem;
     }
+
+    @media (min-width: $breakpoint-desktop) {
+      left: calc(100% + 2rem);
+      height: 0.625rem;
+    }
+
+    @media (min-width: $breakpoint-desktop-large) {
+      width: 600%;
+    }
+  }
+}
+
+.home__latest-grid {
+  @media (min-width: $breakpoint-desktop) {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding-left: $page-margin-desktop;
+  }
+
+  @media (min-width: $breakpoint-desktop-med) {
+    padding-left: 0;
+  }
+}
+
+.home__latest {
+  @media (min-width: $breakpoint-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    width: 60%;
+    margin: 0 5% 0 0;
+  }
+
+  & > article {
+    @media (min-width: $breakpoint-desktop) {
+      width: 47%;
+    }
+
+    &:first-child {
+      @media (min-width: $breakpoint-desktop) {
+        width: 100%;
+      }
+
+      header {
+        @media (min-width: $breakpoint-desktop) {
+          padding-bottom: 1rem;
+        }
+      }
+
+      h2.entry-title {
+        @media (min-width: $breakpoint-desktop) {
+          font-size: 3rem;
+          letter-spacing: 0.004rem;
+          line-height: 2.813rem;
+        }
+      }
+
+      .entry-summary {
+        @media (min-width: $breakpoint-desktop) {
+          display: block !important;
+        }
+
+        p {
+          @media (min-width: $breakpoint-desktop) {
+            margin: 0;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -32,6 +126,11 @@
 
   @media (min-width: $breakpoint-tablet) {
     padding: 1.313rem $page-margin-tablet 1.25rem;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 35%;
+    padding: 3.125rem $page-margin-desktop;
   }
 
   &::before {
@@ -54,6 +153,16 @@
 
   .widget_rss {
     overflow: hidden;
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 6.25rem;
+    }
+
+    &:last-child {
+      @media (min-width: $breakpoint-desktop) {
+        margin-bottom: 0;
+      }
+    }
 
     h3 {
       display: inline-block;
@@ -111,6 +220,46 @@
   }
 }
 
+.home__recent-grid {
+  @media (min-width: $breakpoint-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 $page-margin-desktop;
+  }
+
+  @media (min-width: $breakpoint-desktop-med) {
+    padding: 0;
+  }
+
+  & > article {
+    @media (min-width: $breakpoint-desktop) {
+      width: 47%;
+    }
+
+    header {
+      @media (min-width: $breakpoint-desktop) {
+        padding-bottom: 0;
+      }
+
+      h2.entry-title {
+        @media (min-width: $breakpoint-desktop) {
+          font-size: 3rem;
+          letter-spacing: 0.028rem;
+          line-height: 3rem;
+        }
+      }
+    }
+
+    .entry-summary {
+      @media (min-width: $breakpoint-desktop) {
+        display: block !important;
+      }
+    }
+  }
+}
+
 .home__recent {
   padding-top: 2.5rem;
 
@@ -118,6 +267,50 @@
     &::after {
       content: '';
       background-color: $yellow;
+    }
+  }
+
+  article {
+    &.section-feature {
+      @media (min-width: $breakpoint-desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 9rem;
+      }
+
+      .entry-category {
+        @media (min-width: $breakpoint-desktop) {
+          width: 100%;
+        }
+      }
+
+      header {
+        @media (min-width: $breakpoint-desktop) {
+          width: 45%;
+          padding-right: $page-margin-desktop;
+        }
+
+        h2 {
+          @media (min-width: $breakpoint-desktop) {
+            width: 100%;
+          }
+        }
+      }
+
+      .entry-summary {
+        @media (min-width: $breakpoint-desktop) {
+          display: block !important;
+          width: 55%;
+        }
+
+        p {
+          @media (min-width: $breakpoint-desktop) {
+            margin: 0;
+          }
+        }
+      }
     }
   }
 }

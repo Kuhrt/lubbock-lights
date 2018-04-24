@@ -1,8 +1,52 @@
 article {
+  // CATEGORY OPTIONS
   &.category-feature {
     header {
       .entry-subtitle {
         display: flex;
+      }
+    }
+
+    p {
+      &.entry-category {
+        &::after {
+          content: '';
+          background-color: $red;
+        }
+      }
+    }
+  }
+
+  &.category-politics {
+    p {
+      &.entry-category {
+        &::after {
+          content: '';
+          background-color: $green;
+        }
+      }
+    }
+  }
+
+  &.category-rant,
+  &.category-rants {
+    p {
+      &.entry-category {
+        &::after {
+          content: '';
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+
+  &.category-stupid-snowflake {
+    p {
+      &.entry-category {
+        &::after {
+          content: '';
+          background-color: $light-blue;
+        }
       }
     }
   }
@@ -33,6 +77,11 @@ article {
         border-radius: 50%;
         width: 1.875rem;
         height: 1.875rem;
+
+        @media (min-width: $breakpoint-desktop) {
+          width: 4rem;
+          height: 4rem;
+        }
 
         &::after {
           content: '';
@@ -127,6 +176,10 @@ body.home {
       padding: 0 $page-margin-tablet;
     }
 
+    @media (min-width: $breakpoint-desktop) {
+      padding: 0;
+    }
+
     img {
       position: relative;
       width: 100%;
@@ -151,6 +204,10 @@ body.home {
           color: $red;
         }
       }
+    }
+
+    .entry-summary {
+      display: none;
     }
   }
 }

@@ -2,7 +2,7 @@ footer {
   position: relative;
   background-color: $black;
   padding-top: 1.75rem;
-  overflow-x: hidden;
+  overflow: hidden;
 
   img {
     position: relative;
@@ -24,6 +24,11 @@ footer {
       padding: 0 $page-margin-tablet 2.5rem;
     }
 
+    @media (min-width: $breakpoint-desktop) {
+      padding: 0 $page-margin-desktop 2.5rem;
+      margin-top: -16vw;
+    }
+
     & > section {
       width: 50%;
 
@@ -40,6 +45,10 @@ footer {
 
         a {
           margin-right: 1.25rem;
+
+          &:hover {
+            color: $red;
+          }
 
           &:last-child {
             margin-right: 0;
@@ -109,6 +118,10 @@ footer {
         font-weight: inherit;
         line-height: inherit;
         text-decoration: none;
+
+        &:hover {
+          color: $red;
+        }
       }
     }
   }

@@ -12,4 +12,7 @@
       {{ __('By', 'sage') }} {{ get_the_author() }}
     </p>
   </header>
+  <div class="entry-summary">
+    @php the_excerpt() @endphp
+  </div>
 </article>

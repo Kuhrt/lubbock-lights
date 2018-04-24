@@ -4,6 +4,15 @@ body.home {
     padding: 0;
     margin-bottom: 3.625rem;
 
+    @media (min-width: $breakpoint-desktop) {
+      padding: 0 $page-margin-desktop;
+      margin-bottom: 5rem;
+    }
+
+    @media (min-width: $breakpoint-desktop-med) {
+      padding: 0;
+    }
+
     &.category-feature {
       .entry-image {
         &::after {
@@ -24,6 +33,19 @@ body.home {
       }
     }
 
+    header {
+      @media (min-width: $breakpoint-desktop) {
+        display: flex;
+        align-items: center;
+      }
+
+      & > * {
+        @media (min-width: $breakpoint-desktop) {
+          width: 50%;
+        }
+      }
+    }
+
     .entry-image {
       position: relative;
       background-blend-mode: multiply;
@@ -37,6 +59,11 @@ body.home {
       @media (min-width: $breakpoint-tablet) {
         height: 27rem;
       }
+
+      @media (min-width: $breakpoint-desktop) {
+        height: 37rem;
+        margin-bottom: 3.125rem;
+      }
     }
 
     .entry-subtitle {
@@ -48,6 +75,14 @@ body.home {
         @media (min-width: $breakpoint-tablet) {
           margin: 0 0.5rem 0 $page-margin-tablet;
         }
+
+        @media (min-width: $breakpoint-desktop) {
+          font-size: 4.5rem;
+          letter-spacing: 0.007rem;
+          line-height: 4.641rem;
+          max-width: 29rem;
+          margin: 0 0.5rem 0 0;
+        }
       }
     }
 
@@ -58,6 +93,10 @@ body.home {
         @media (min-width: $breakpoint-tablet) {
           margin: 0 $page-margin-tablet 0.5rem;
         }
+
+        @media (min-width: $breakpoint-desktop) {
+          margin: 0 0 0.75rem;
+        }
       }
 
       &.author {
@@ -65,6 +104,10 @@ body.home {
 
         @media (min-width: $breakpoint-tablet) {
           margin: 0.5rem $page-margin-tablet;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+          display: none;
         }
       }
     }
@@ -78,6 +121,13 @@ body.home {
 
       @media (min-width: $breakpoint-tablet) {
         margin: 0.5rem $page-margin-tablet;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        font-size: 4rem;
+        letter-spacing: 0.006rem;
+        line-height: 4.141rem;
+        margin: 0;
       }
     }
   }

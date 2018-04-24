@@ -1,0 +1,14 @@
+body.error404 {
+  main.main {
+    text-align: center;
+    padding: 1rem $page-margin;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding: 1.5rem $page-margin-tablet;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      padding: 2.5rem $page-margin-desktop;
+    }
+  }
+}

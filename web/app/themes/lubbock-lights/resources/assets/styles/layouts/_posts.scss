@@ -1,4 +1,20 @@
 body.single-post {
+  main.main {
+    @media (min-width: $breakpoint-desktop) {
+      margin: 0 $page-margin-desktop;
+    }
+
+    @media (min-width: $breakpoint-desktop-med) {
+      max-width: 1440px;
+      margin: 0 auto;
+      overflow-x: hidden;
+    }
+
+    @media (min-width: $breakpoint-desktop-xl) {
+      max-width: 1800px;
+    }
+  }
+
   article {
     header {
       padding-right: $page-margin;
@@ -8,9 +24,18 @@ body.single-post {
         padding-right: $page-margin-tablet;
         padding-left: $page-margin-tablet;
       }
+
+      @media (min-width: $breakpoint-desktop) {
+        padding-right: 5.875rem;
+        padding-left: 5.875rem;
+      }
     }
 
     .entry-content {
+      @media (min-width: $breakpoint-desktop) {
+        padding-bottom: 4rem;
+      }
+
       h2,
       h3,
       h4,
@@ -22,6 +47,35 @@ body.single-post {
         @media (min-width: $breakpoint-tablet) {
           padding-right: $page-margin-tablet;
           padding-left: $page-margin-tablet;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+          max-width: 50rem;
+          padding-right: auto;
+          padding-left: 5.875rem;
+        }
+      }
+
+      img {
+        & + p {
+          @media (min-width: $breakpoint-desktop) {
+            margin-top: 3.125rem;
+          }
+        }
+      }
+
+      p {
+        @media (min-width: $breakpoint-desktop) {
+          max-width: 50rem;
+          margin-right: auto;
+          margin-left: 5.875rem;
+        }
+
+        &:first-child {
+          @media (min-width: $breakpoint-desktop) {
+            text-indent: 2rem;
+            margin-top: 3.125rem;
+          }
         }
       }
     }

@@ -10,7 +10,19 @@ header.banner {
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding: $page-margin-desktop $page-margin-desktop 2rem;
+    padding: 2rem $page-margin-desktop 10rem;
+  }
+
+  @media (min-width: $breakpoint-desktop-med) {
+    padding: 2rem $page-margin-desktop 12rem;
+  }
+
+  @media (min-width: $breakpoint-desktop-large) {
+    padding: 2rem $page-margin-desktop 16rem;
+  }
+
+  @media (min-width: $breakpoint-desktop-huge) {
+    padding: 2rem $page-margin-desktop 24rem;
   }
 
   nav {
@@ -66,6 +78,29 @@ header.banner {
       }
     }
 
+    &.mobile-nav {
+      .menu-main-menu-container {
+        @media (min-width: $breakpoint-desktop) {
+          display: none;
+        }
+      }
+    }
+
+    &.desktop-nav {
+      display: none;
+
+      @media (min-width: $breakpoint-desktop) {
+        display: block;
+        flex-grow: 2;
+        background-color: transparent;
+        text-align: right;
+        width: auto;
+        height: auto;
+        padding: 0;
+        border-radius: 0;
+      }
+    }
+
     & > img {
       position: absolute;
       top: 50%;
@@ -83,7 +118,8 @@ header.banner {
       position: relative;
     }
 
-    #menu-main-menu {
+    #menu-main-menu,
+    #menu-main-menu-1 {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -97,6 +133,16 @@ header.banner {
       transition: all 0.3s ease-in-out;
       transition-delay: 0s;
 
+      @media (min-width: $breakpoint-desktop) {
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: auto;
+        opacity: 1;
+      }
+
       li {
         display: block;
         text-align: center;
@@ -107,8 +153,19 @@ header.banner {
           margin-bottom: 4.5rem;
         }
 
+        @media (min-width: $breakpoint-desktop) {
+          display: inline;
+          width: auto;
+          margin-right: 1.5rem;
+          margin-bottom: 0;
+        }
+
         &:last-child {
           margin-bottom: 0;
+
+          @media (min-width: $breakpoint-desktop) {
+            margin-right: 0;
+          }
         }
 
         a {
@@ -119,6 +176,18 @@ header.banner {
           letter-spacing: 0.004rem;
           line-height: 1;
           text-decoration: none;
+
+          @media (min-width: $breakpoint-desktop) {
+            color: $black;
+            font-size: 1.75rem;
+            letter-spacing: 0.003rem;
+          }
+
+          &:hover {
+            @media (min-width: $breakpoint-desktop) {
+              color: $red;
+            }
+          }
         }
       }
     }
@@ -145,6 +214,7 @@ header.banner {
       font-size: 2.25rem;
       letter-spacing: 0.27rem;
       line-height: 2.129rem;
+      margin-left: 1rem;
     }
 
     span {
@@ -178,7 +248,7 @@ header.banner {
     }
 
     @media (min-width: $breakpoint-desktop) {
-      right: $page-margin-desktop;
+      display: none;
     }
 
     &:hover {
