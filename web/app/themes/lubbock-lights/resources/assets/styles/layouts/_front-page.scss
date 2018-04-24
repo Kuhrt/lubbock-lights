@@ -5,10 +5,6 @@ body.home {
       margin: 0 auto;
       overflow-x: hidden;
     }
-
-    @media (min-width: $breakpoint-desktop-xl) {
-      max-width: 1800px;
-    }
   }
 }
 
@@ -47,11 +43,12 @@ body.home {
 
     @media (min-width: $breakpoint-desktop) {
       left: calc(100% + 2rem);
+      width: 600%;
       height: 0.625rem;
     }
 
     @media (min-width: $breakpoint-desktop-large) {
-      width: 600%;
+      width: 800%;
     }
   }
 }

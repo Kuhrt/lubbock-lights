@@ -62,7 +62,7 @@
 
   <!-- RECENT STORIES -->
   <section class="home__recent">
-    <h1 class="home__title">Recent Stuff</h1>
+    <h1 class="home__title">They Said That?</h1>
     @php
   		$args = array(
   			'post_type' => 'post',
@@ -79,6 +79,7 @@
     @endif
     @php wp_reset_query() @endphp
 
+    <h1 class="home__title">Recent Stuff</h1>
     <div class="home__recent-grid">
       @php
     		$args = array(

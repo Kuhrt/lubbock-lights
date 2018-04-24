@@ -9,10 +9,6 @@ body.page {
       margin: 0 auto;
       overflow-x: hidden;
     }
-
-    @media (min-width: $breakpoint-desktop-xl) {
-      max-width: 1800px;
-    }
   }
 
   h1 {

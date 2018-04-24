@@ -1,6 +1,10 @@
 html {
   box-sizing: border-box;
   background-color: $grey;
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 12px;
+  }
 }
 
 *,
@@ -22,25 +26,25 @@ body {
 
   @media (min-width: $breakpoint-desktop) {
     background: #eee;
-    background: linear-gradient(to bottom, #fff 0%, #fff 19rem, #eee 20rem, #eee 100%);
+    background: linear-gradient(to bottom, #fff 0%, #fff 24rem, #eee 26rem, #eee 100%);
     filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fff', endColorstr='#eee', GradientType=0);
   }
 
   @media (min-width: $breakpoint-desktop-med) {
     background: #eee;
-    background: linear-gradient(to bottom, #fff 0%, #fff 23rem, #eee 24rem, #eee 100%);
+    background: linear-gradient(to bottom, #fff 0%, #fff 31rem, #eee 32rem, #eee 100%);
     filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fff', endColorstr='#eee', GradientType=0);
   }
 
   @media (min-width: $breakpoint-desktop-xl) {
     background: #eee;
-    background: linear-gradient(to bottom, #fff 0%, #fff 26rem, #eee 27rem, #eee 100%);
+    background: linear-gradient(to bottom, #fff 0%, #fff 34rem, #eee 35rem, #eee 100%);
     filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fff', endColorstr='#eee', GradientType=0);
   }
 
   @media (min-width: $breakpoint-desktop-huge) {
     background: #eee;
-    background: linear-gradient(to bottom, #fff 0%, #fff 34rem, #eee 35rem, #eee 100%);
+    background: linear-gradient(to bottom, #fff 0%, #fff 39rem, #eee 40rem, #eee 100%);
     filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fff', endColorstr='#eee', GradientType=0);
   }
 
@@ -155,6 +159,11 @@ ul li {
   font-weight: 400;
   letter-spacing: 0.062rem;
   line-height: 1.875rem;
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
 
   &.author {
     color: #4b4b4b;
