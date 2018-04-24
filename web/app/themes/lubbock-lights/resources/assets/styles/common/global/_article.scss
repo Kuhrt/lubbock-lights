@@ -60,6 +60,10 @@ article {
       justify-content: flex-start;
       align-items: center;
 
+      @media (min-width: $breakpoint-desktop) {
+        margin-bottom: 1rem;
+      }
+
       p {
         color: $black;
         font-family: $font-avenir;
@@ -69,6 +73,12 @@ article {
         line-height: 1.631rem;
         text-transform: uppercase;
         margin: 0 0.5rem 0 0;
+
+        @media (min-width: $breakpoint-desktop) {
+          font-size: 3rem;
+          letter-spacing: 0.236rem;
+          line-height: 3.481rem;
+        }
       }
 
       .entry-subtitle__image {
