@@ -84,6 +84,8 @@ header.banner {
 
     &.mobile-nav {
       .menu-main-menu-container {
+        display: none;
+
         @media (min-width: $breakpoint-desktop) {
           display: none;
         }
@@ -94,7 +96,7 @@ header.banner {
       display: none;
 
       @media (min-width: $breakpoint-desktop) {
-        display: block;
+        // display: block;
         flex-grow: 2;
         background-color: transparent;
         text-align: right;
@@ -245,6 +247,7 @@ header.banner {
   }
 
   .hamburger {
+    display: none;
     position: absolute;
     right: $page-margin;
     z-index: 1001;

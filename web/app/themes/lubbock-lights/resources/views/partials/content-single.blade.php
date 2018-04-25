@@ -1,9 +1,11 @@
 <article @php post_class() @endphp>
   <header>
-    <div class="entry-subtitle">
-      <p>Reagor on Raiders</p>
-      <div class="entry-subtitle__image"></div>
-    </div>
+    @if (get_field('series_title'))
+      <div class="entry-subtitle">
+        <p>{{ the_field('series_title') }}</p>
+        <div class="entry-subtitle__image"><div style="background-image: url('{{ the_field('series_icon') }}');"></div></div>
+      </div>
+    @endif
     <h1 class="entry-title">{{ get_the_title() }}</h1>
     @include('partials/entry-meta')
   </header>

@@ -36,10 +36,10 @@
     @php
       $featureCategoryID = get_cat_ID( 'feature' );
       $rantsCategoryID = get_cat_ID( 'rants' );
-      $snowflakeCategoryID = get_cat_ID( 'Stupid Snowflake' );
+      $theySaidThatCategoryID = get_cat_ID( 'They Said That' );
   		$args = array(
   			'post_type' => 'post',
-        'category__not_in' => array( $featureCategoryID, $rantsCategoryID, $snowflakeCategoryID ),
+        'category__not_in' => array( $featureCategoryID, $theySaidThatCategoryID ),
   			'posts_per_page' => 5
   		);
   		$the_query = new WP_Query( $args );
@@ -66,7 +66,7 @@
     @php
   		$args = array(
   			'post_type' => 'post',
-        'category_name' => 'stupid-snowflake',
+        'category_name' => 'they-said-that',
   			'posts_per_page' => 1
   		);
   		$the_query = new WP_Query( $args );
@@ -79,13 +79,12 @@
     @endif
     @php wp_reset_query() @endphp
 
-    <h1 class="home__title">Recent Stuff</h1>
     <div class="home__recent-grid">
       @php
     		$args = array(
     			'post_type' => 'post',
           'category_name' => 'rants',
-          'category__not_in' => array( $snowflakeCategoryID ),
+          'category__not_in' => array( $theySaidThatCategoryID ),
     			'posts_per_page' => 2
     		);
     		$the_query = new WP_Query( $args );

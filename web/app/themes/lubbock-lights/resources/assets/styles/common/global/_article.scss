@@ -17,6 +17,18 @@ article {
     }
   }
 
+  &.category-news,
+  &.category-ttu-news {
+    p {
+      &.entry-category {
+        &::after {
+          content: '';
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+
   &.category-politics {
     p {
       &.entry-category {
@@ -34,13 +46,14 @@ article {
       &.entry-category {
         &::after {
           content: '';
-          background-color: $yellow;
+          background-color: $light-blue;
         }
       }
     }
   }
 
-  &.category-stupid-snowflake {
+  &.category-stupid-snowflake,
+  &.category-stupid-they-said-that {
     p {
       &.entry-category {
         &::after {
@@ -93,14 +106,15 @@ article {
           height: 4rem;
         }
 
-        &::after {
-          content: '';
+        & > div {
           display: block;
           position: absolute;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          background: url('../images/guns-up.svg') center no-repeat;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
           width: 75%;
           height: 75%;
         }
