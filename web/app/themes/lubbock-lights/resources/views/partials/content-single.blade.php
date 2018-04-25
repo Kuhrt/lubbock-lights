@@ -3,7 +3,9 @@
     @if (get_field('series_title'))
       <div class="entry-subtitle">
         <p>{{ the_field('series_title') }}</p>
-        <div class="entry-subtitle__image"><div style="background-image: url('{{ the_field('series_icon') }}');"></div></div>
+        @if (get_field('series_icon'))
+          <div class="entry-subtitle__image"><div style="background-image: url('{{ the_field('series_icon') }}');"></div></div>
+        @endif
       </div>
     @endif
     <h1 class="entry-title">{{ get_the_title() }}</h1>
