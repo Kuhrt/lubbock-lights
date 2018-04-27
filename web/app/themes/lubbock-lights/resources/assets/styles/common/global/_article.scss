@@ -11,54 +11,18 @@ article {
       &.entry-category {
         &::after {
           content: '';
+          background-color: $light-blue;
+        }
+      }
+    }
+  }
+
+  &.category-feature {
+    p {
+      &.entry-category {
+        &::after {
+          content: '';
           background-color: $red;
-        }
-      }
-    }
-  }
-
-  &.category-news,
-  &.category-ttu-news {
-    p {
-      &.entry-category {
-        &::after {
-          content: '';
-          background-color: $yellow;
-        }
-      }
-    }
-  }
-
-  &.category-politics {
-    p {
-      &.entry-category {
-        &::after {
-          content: '';
-          background-color: $green;
-        }
-      }
-    }
-  }
-
-  &.category-rant,
-  &.category-rants {
-    p {
-      &.entry-category {
-        &::after {
-          content: '';
-          background-color: $light-blue;
-        }
-      }
-    }
-  }
-
-  &.category-stupid-snowflake,
-  &.category-stupid-they-said-that {
-    p {
-      &.entry-category {
-        &::after {
-          content: '';
-          background-color: $light-blue;
         }
       }
     }
