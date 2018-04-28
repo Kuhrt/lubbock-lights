@@ -1,48 +1,53 @@
 header.banner {
   position: relative;
-  display: flex;
-  align-items: center;
+  text-align: center;
   padding: $page-margin $page-margin 2rem;
   z-index: 3;
 
   @media (min-width: $breakpoint-tablet) {
-    padding: 1.5rem $page-margin-tablet 4.5rem;
+    padding: $page-margin-tablet $page-margin-tablet 3.5rem;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding: 2rem $page-margin-desktop 15rem;
+    padding: 4rem $page-margin-desktop 5.125rem;
   }
 
-  @media (min-width: $breakpoint-desktop-med) {
-    padding: 2rem $page-margin-desktop 17rem;
-  }
-
+  // @media (min-width: $breakpoint-desktop-med) {
+  //   padding: 2rem $page-margin-desktop 17rem;
+  // }
+  //
   @media (min-width: $breakpoint-desktop-large) {
-    padding: 2rem $page-margin-desktop 23rem;
+    padding: 4rem $page-margin-desktop 8rem;
   }
-
-  @media (min-width: $breakpoint-desktop-xl) {
-    padding: 2rem $page-margin-desktop 28rem;
-  }
-
+  //
+  // @media (min-width: $breakpoint-desktop-xl) {
+  //   padding: 2rem $page-margin-desktop 28rem;
+  // }
+  //
   @media (min-width: $breakpoint-desktop-huge) {
-    padding: 2rem $page-margin-desktop 34rem;
+    padding: 2rem $page-margin-desktop 10rem;
   }
 
   nav {
     position: relative;
     display: block;
     background-color: $red;
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 3.5rem;
+    height: 3.5rem;
     padding: 0 $page-margin;
+    margin: 0 auto;
     border-radius: 50%;
     z-index: 100;
     transition: all 0.3s ease-in-out;
 
     @media (min-width: $breakpoint-tablet) {
-      width: 4.125rem;
-      height: 4.125rem;
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 8.25rem;
+      height: 8.25rem;
     }
 
     &.active {
@@ -112,11 +117,15 @@ header.banner {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 2rem;
+      width: 2.5rem;
       transition: all 0.6s ease-in-out;
 
       @media (min-width: $breakpoint-tablet) {
-        width: 2.875rem;
+        width: 3.25rem;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        width: 5.625rem;
       }
     }
 
@@ -200,48 +209,71 @@ header.banner {
   }
 
   .brand {
+    position: relative;
+    display: block;
     color: $black;
     font-family: $font-avenir;
-    font-size: 0.938rem;
+    font-size: 1.375rem;
     font-weight: 700;
     letter-spacing: 0.114rem;
     line-height: 0.898rem;
     text-decoration: none;
     text-transform: uppercase;
-    margin-left: 0.5rem;
+    margin-top: 0.5rem;
 
     @media (min-width: $breakpoint-tablet) {
-      font-size: 1.594rem;
+      font-size: 2.375rem;
       letter-spacing: 0.192rem;
-      line-height: 1.5135rem;
-      margin-left: 0.75rem;
+      line-height: 1;
     }
 
     @media (min-width: $breakpoint-desktop) {
-      font-size: 2.25rem;
-      letter-spacing: 0.27rem;
-      line-height: 2.129rem;
-      margin-left: 1rem;
+      font-size: 3.375rem;
+      letter-spacing: 0.037rem;
+      margin-top: 1.5rem;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -0.625rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $dark-grey;
+      width: 40%;
+      height: 0.0125rem;
+
+      @media (min-width: $breakpoint-tablet) {
+        bottom: -1rem;
+        width: 33%;
+        height: 0.125rem;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        bottom: -1.375rem;
+        width: 18.375rem;
+      }
     }
 
     span {
       display: block;
       color: #7d7d7d;
       font-family: $font-levato;
-      font-size: 0.75rem;
+      font-size: 1rem;
       font-weight: 700;
       letter-spacing: 0.03rem;
       text-transform: none;
-      margin-top: 0.125rem;
+      margin-top: 0.5rem;
 
       @media (min-width: $breakpoint-tablet) {
-        font-size: 1.094rem;
+        font-size: 1.5rem;
         letter-spacing: 0.0435rem;
       }
 
       @media (min-width: $breakpoint-desktop) {
-        font-size: 1.438rem;
-        letter-spacing: 0.057rem;
+        font-size: 2.188rem;
+        letter-spacing: 0.085rem;
       }
     }
   }
