@@ -1,4 +1,10 @@
 body.home {
+  div.content {
+    @media (min-width: $breakpoint-desktop) {
+      padding-top: $page-margin-desktop;
+    }
+  }
+
   main.main {
     @media (min-width: $breakpoint-desktop-med) {
       max-width: 1440px;

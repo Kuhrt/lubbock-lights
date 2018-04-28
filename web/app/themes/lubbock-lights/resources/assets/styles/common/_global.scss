@@ -220,6 +220,15 @@ ul li {
         height: 0.33rem;
       }
     }
+
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      text-decoration: none;
+      padding: 0;
+      margin: 0;
+    }
   }
 
   a {
@@ -286,6 +295,7 @@ blockquote {
 
   img {
     width: 100%;
+    height: auto;
 
     @media (min-width: $breakpoint-desktop) {
       width: auto;

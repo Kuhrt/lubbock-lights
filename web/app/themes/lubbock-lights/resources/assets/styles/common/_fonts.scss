@@ -2,40 +2,40 @@
 
 @font-face {
   font-family: "Avenir Next";
-  src: url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix");
-  src: url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix") format("eot"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/2cd55546-ec00-4af9-aeca-4a3cd186da53.woff2") format("woff2"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/1e9892c0-6927-4412-9874-1b82801ba47a.woff") format("woff"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf") format("truetype"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/52a192b1-bea5-4b48-879f-107f009b666f.svg#52a192b1-bea5-4b48-879f-107f009b666f") format("svg");
+  src: url("../fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix");
+  src: url("../fonts/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix") format("eot"), url("../fonts/2cd55546-ec00-4af9-aeca-4a3cd186da53.woff2") format("woff2"), url("../fonts/1e9892c0-6927-4412-9874-1b82801ba47a.woff") format("woff"), url("../fonts/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf") format("truetype"), url("../fonts/52a192b1-bea5-4b48-879f-107f009b666f.svg#52a192b1-bea5-4b48-879f-107f009b666f") format("svg");
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Avenir Next";
-  src: url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/dccb10af-07a2-404c-bfc7-7750e2716bc1.eot?#iefix");
-  src: url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/dccb10af-07a2-404c-bfc7-7750e2716bc1.eot?#iefix") format("eot"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/14c73713-e4df-4dba-933b-057feeac8dd1.woff2") format("woff2"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/b8e906a1-f5e8-4bf1-8e80-82c646ca4d5f.woff") format("woff"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/890bd988-5306-43ff-bd4b-922bc5ebdeb4.ttf") format("truetype"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/ed104d8c-7f39-4e8b-90a9-4076be06b857.svg#ed104d8c-7f39-4e8b-90a9-4076be06b857") format("svg");
+  src: url("../fonts/dccb10af-07a2-404c-bfc7-7750e2716bc1.eot?#iefix");
+  src: url("../fonts/dccb10af-07a2-404c-bfc7-7750e2716bc1.eot?#iefix") format("eot"), url("../fonts/14c73713-e4df-4dba-933b-057feeac8dd1.woff2") format("woff2"), url("../fonts/b8e906a1-f5e8-4bf1-8e80-82c646ca4d5f.woff") format("woff"), url("../fonts/890bd988-5306-43ff-bd4b-922bc5ebdeb4.ttf") format("truetype"), url("../fonts/ed104d8c-7f39-4e8b-90a9-4076be06b857.svg#ed104d8c-7f39-4e8b-90a9-4076be06b857") format("svg");
   font-style: normal;
   font-weight: 700;
 }
 
 @font-face {
   font-family: "Levato";
-  src: url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/3c114000-4f60-42c7-9f8a-6085f5ad3973.eot?#iefix");
-  src: url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/3c114000-4f60-42c7-9f8a-6085f5ad3973.eot?#iefix") format("eot"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/676f4f65-71f8-417d-91dc-598b35d2423b.woff2") format("woff2"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/63b3b661-c142-4722-849d-3625ef23da31.woff") format("woff"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/b56ef87e-4fae-4474-bedf-a4e66cf316ad.ttf") format("truetype"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/01a68543-179b-45af-a5b4-d9974393c40c.svg#01a68543-179b-45af-a5b4-d9974393c40c") format("svg");
+  src: url("../fonts/3c114000-4f60-42c7-9f8a-6085f5ad3973.eot?#iefix");
+  src: url("../fonts/3c114000-4f60-42c7-9f8a-6085f5ad3973.eot?#iefix") format("eot"), url("../fonts/676f4f65-71f8-417d-91dc-598b35d2423b.woff2") format("woff2"), url("../fonts/63b3b661-c142-4722-849d-3625ef23da31.woff") format("woff"), url("../fonts/b56ef87e-4fae-4474-bedf-a4e66cf316ad.ttf") format("truetype"), url("../fonts/01a68543-179b-45af-a5b4-d9974393c40c.svg#01a68543-179b-45af-a5b4-d9974393c40c") format("svg");
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Levato";
-  src: url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/dd03a0c1-d0d4-46a2-9001-9285fb407781.eot?#iefix");
-  src: url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/dd03a0c1-d0d4-46a2-9001-9285fb407781.eot?#iefix") format("eot"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/096850ef-e931-43ec-88eb-fb0478975151.woff2") format("woff2"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/3fe50fc9-a674-4ac2-823f-220925e9ca42.woff") format("woff"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/3090537f-de19-4e85-aaed-3bd82484bc05.ttf") format("truetype"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/1dd898f8-a13f-429a-8a02-c6afe3befdb7.svg#1dd898f8-a13f-429a-8a02-c6afe3befdb7") format("svg");
+  src: url("../fonts/dd03a0c1-d0d4-46a2-9001-9285fb407781.eot?#iefix");
+  src: url("../fonts/dd03a0c1-d0d4-46a2-9001-9285fb407781.eot?#iefix") format("eot"), url("../fonts/096850ef-e931-43ec-88eb-fb0478975151.woff2") format("woff2"), url("../fonts/3fe50fc9-a674-4ac2-823f-220925e9ca42.woff") format("woff"), url("../fonts/3090537f-de19-4e85-aaed-3bd82484bc05.ttf") format("truetype"), url("../fonts/1dd898f8-a13f-429a-8a02-c6afe3befdb7.svg#1dd898f8-a13f-429a-8a02-c6afe3befdb7") format("svg");
   font-style: italic;
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Levato";
-  src: url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/3d1101da-228b-4014-9db6-d81aa748fe79.eot?#iefix");
-  src: url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/3d1101da-228b-4014-9db6-d81aa748fe79.eot?#iefix") format("eot"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/12dfe82d-79db-411c-802b-bf72bdecbd7c.woff2") format("woff2"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/d4a2f491-c5e1-4349-8793-2cd4c73cb290.woff") format("woff"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/9b98f8d9-309e-41e4-abc4-5c257d01a8b9.ttf") format("truetype"), url("/lubbock-lights/wp-content/themes/lubbock-lights/dist/fonts/6053c1c3-40d0-4040-a019-0f0b8769e384.svg#6053c1c3-40d0-4040-a019-0f0b8769e384") format("svg");
+  src: url("../fonts/3d1101da-228b-4014-9db6-d81aa748fe79.eot?#iefix");
+  src: url("../fonts/3d1101da-228b-4014-9db6-d81aa748fe79.eot?#iefix") format("eot"), url("../fonts/12dfe82d-79db-411c-802b-bf72bdecbd7c.woff2") format("woff2"), url("../fonts/d4a2f491-c5e1-4349-8793-2cd4c73cb290.woff") format("woff"), url("../fonts/9b98f8d9-309e-41e4-abc4-5c257d01a8b9.ttf") format("truetype"), url("../fonts/6053c1c3-40d0-4040-a019-0f0b8769e384.svg#6053c1c3-40d0-4040-a019-0f0b8769e384") format("svg");
   font-style: normal;
   font-weight: 700;
 }

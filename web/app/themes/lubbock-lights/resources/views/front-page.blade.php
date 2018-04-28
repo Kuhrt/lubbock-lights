@@ -2,7 +2,7 @@
 
 @section('content')
   <div class="page-header">
-    <h1 class="home__title">Latest Stuff</h1>
+    
   </div>
 
 
