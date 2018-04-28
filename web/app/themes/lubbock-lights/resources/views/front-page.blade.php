@@ -2,7 +2,7 @@
 
 @section('content')
   <div class="page-header">
-    
+
   </div>
 
 
@@ -55,7 +55,6 @@
 
     <!-- NEWS RSS -->
     <section class="home__news">
-      <h1>News</h1>
       @php dynamic_sidebar('sidebar-home-news') @endphp
     </section>
   </div>

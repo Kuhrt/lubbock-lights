@@ -303,5 +303,50 @@ blockquote {
   }
 }
 
+label {
+  color: #8c8c8c;
+  font-family: $font-levato;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.006rem;
+  margin-bottom: 0.75rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background: $white;
+  font-family: $font-avenir;
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button,
+input[type="submit"] {
+  display: block;
+  color: $red;
+  font-family: $font-avenir;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.181rem;
+  text-align: center;
+  background-color: transparent;
+  padding: 1.125rem 4.375rem;
+  margin: 0 auto;
+  border: 0.188rem solid $red;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $red;
+    color: $white;
+    cursor: pointer;
+  }
+}
+
 @import "global/article";
 @import "global/feature-article";

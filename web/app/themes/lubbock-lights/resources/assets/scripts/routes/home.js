@@ -8,7 +8,7 @@ export default {
     // JavaScript to be fired on the home page, after the init JS
     if ($(window).width() < 1200) {
       $('.home__news').slick({
-        slide: 'section',
+        slide: '.widget_rss',
         rows: 0,
         autoplay: true,
         autoplaySpeed: 6000,
@@ -20,7 +20,7 @@ export default {
     $(window).on('resize', function() {
       if ($(window).width() < 1200 && !$('.home__news').hasClass('slick-initialized')) {
         $('.home__news').slick({
-          slide: 'section',
+          slide: '.widget_rss',
           rows: 0,
           autoplay: true,
           autoplaySpeed: 6000,

@@ -136,27 +136,70 @@ body.home {
     padding: 3.125rem $page-margin-desktop;
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: $yellow;
-    width: 100%;
-    height: 1.313rem;
+  h1 {
+    position: relative;
+    max-width: 50%;
+    margin-bottom: 4rem;
+
+    @media (min-width: $breakpoint-desktop) {
+      max-width: 100%;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0.625rem;
+      left: 100%;
+      background-color: $red;
+      width: 200%;
+      height: 0.25rem;
+
+      @media (min-width: $breakpoint-desktop) {
+        height: 0.625rem;
+      }
+    }
+
+    &.form {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+
+      @media (min-width: $breakpoint-desktop) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &.news {
+      &::after {
+        content: '';
+        background-color: $yellow;
+      }
+    }
   }
 
-  h1 {
-    margin-bottom: 4rem;
+  hr {
+    background-color: #969696;
+    width: 75%;
+    height: 0.188rem;
+    margin: 3.25rem auto;
+    border: none;
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 100%;
+      margin: 6.25rem auto;
+    }
   }
 
   a:hover {
     color: $yellow;
   }
 
+  .widget_text,
   .widget_rss {
     overflow: hidden;
+  }
 
+  .widget_rss {
     @media (min-width: $breakpoint-desktop) {
       margin-bottom: 6.25rem;
     }
