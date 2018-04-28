@@ -16,6 +16,11 @@
       @php the_post_thumbnail( 'full' ) @endphp
     </div>
     <div class="entry-content__body">
+      <div class="entry-content-body__share">
+        <a href="https://www.facebook.com/sharer/" class="facebook" target="_blank"><i class="fa fa-facebook-f"></i></a>
+        <a href="https://twitter.com/intent/tweet?text={{ get_the_title() }}&amp;url=http:{{ get_permalink() }}" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="mailto:?subject={{ get_the_title() }}" class="mail"><i class="fa fa-envelope mail"></i></a>
+      </div>
       @php the_content() @endphp
     </div>
   </div>
