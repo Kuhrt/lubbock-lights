@@ -12,6 +12,12 @@ body.page {
   }
 
   h1 {
+    margin-left: $page-margin;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: $page-margin-tablet;
+    }
+
     @media (min-width: $breakpoint-desktop) {
       margin-left: 5.875rem;
     }

@@ -1,5 +1,6 @@
 <article @php post_class() @endphp>
   <header>
+    This is content-single.blade.php
     @if (get_field('series_title'))
       <div class="entry-subtitle">
         <p>{{ the_field('series_title') }}</p>

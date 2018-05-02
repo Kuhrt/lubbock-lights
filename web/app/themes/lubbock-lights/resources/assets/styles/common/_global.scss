@@ -64,6 +64,7 @@ body {
     }
 
     @media (min-width: $breakpoint-desktop) {
+      top: 0;
       height: 29rem;
       height: 34vw;
     }
@@ -321,6 +322,13 @@ textarea {
   padding: 0.5rem;
   border: none;
 
+  @media (min-width: $breakpoint-desktop) {
+    background-color: $grey;
+    max-width: 40rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
   &:focus {
     outline: none;
   }
@@ -340,6 +348,10 @@ input[type="submit"] {
   margin: 0 auto;
   border: 0.188rem solid $red;
   transition: all 0.3s;
+
+  @media (min-width: $breakpoint-desktop) {
+    margin: 0;
+  }
 
   &:hover {
     background-color: $red;

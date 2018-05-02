@@ -1,4 +1,6 @@
 body.home {
+  background: $white;
+
   div.content {
     @media (min-width: $breakpoint-desktop) {
       padding-top: $page-margin-desktop;
@@ -174,6 +176,49 @@ body.home {
         content: '';
         background-color: $yellow;
       }
+    }
+  }
+
+  div.work-with-us {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  h2.form {
+    font-family: $font-levato;
+    text-align: center;
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 2.25rem;
+      line-height: 2.25rem;
+      letter-spacing: 0.003rem;
+    }
+  }
+
+  a.write-for-us {
+    display: inline-block;
+    background-color: transparent;
+    color: $red;
+    font-family: $font-avenir;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.003rem;
+    line-height: 1;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border: 0.5rem solid $red;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: 1rem;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      padding: 1.625rem 1.75rem;
+    }
+
+    &:hover {
+      background-color: $red;
+      color: $white;
     }
   }
 
