@@ -95,6 +95,16 @@ body.home {
         width: 100%;
       }
 
+      .entry-content__image {
+        @media (min-width: $breakpoint-tablet) {
+          height: 22.5rem !important;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+          height: 32rem !important;
+        }
+      }
+
       header {
         @media (min-width: $breakpoint-desktop) {
           padding-bottom: 1rem;
@@ -310,6 +320,10 @@ body.home {
         letter-spacing: 0.014rem;
         line-height: 2.125rem;
         padding-bottom: 1rem;
+
+        @media (min-width: $breakpoint-desktop) {
+          padding-bottom: 2rem;
+        }
 
         a {
           color: $black;

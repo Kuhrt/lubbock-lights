@@ -35,12 +35,12 @@
     <section class="home__latest">
     @php
       $featureCategoryID = get_cat_ID( 'feature' );
-      $rantsCategoryID = get_cat_ID( 'rants' );
       $theySaidThatCategoryID = get_cat_ID( 'They Said That' );
+      $theyDidThatCategoryID = get_cat_ID( 'They Did That' );
   		$args = array(
   			'post_type' => 'post',
-        'category__not_in' => array( $featureCategoryID, $theySaidThatCategoryID ),
-  			'posts_per_page' => 5
+        'category__not_in' => array( $featureCategoryID, $theySaidThatCategoryID, $theyDidThatCategoryID ),
+  			'posts_per_page' => 7
   		);
   		$the_query = new WP_Query( $args );
   	@endphp
@@ -65,7 +65,7 @@
     @php
   		$args = array(
   			'post_type' => 'post',
-        'category_name' => 'they-said-that',
+        'category__in' => [$theySaidThatCategoryID, $theyDidThatCategoryID],
   			'posts_per_page' => 1
   		);
   		$the_query = new WP_Query( $args );
@@ -83,7 +83,7 @@
     		$args = array(
     			'post_type' => 'post',
           'category_name' => 'rants',
-          'category__not_in' => array( $theySaidThatCategoryID ),
+          'category__not_in' => array( $theySaidThatCategoryID, $theyDidThatCategoryID ),
     			'posts_per_page' => 2
     		);
     		$the_query = new WP_Query( $args );

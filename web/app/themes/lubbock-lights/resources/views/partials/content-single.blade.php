@@ -1,6 +1,5 @@
 <article @php post_class() @endphp>
   <header>
-    This is content-single.blade.php
     @if (get_field('series_title'))
       <div class="entry-subtitle">
         <p>{{ the_field('series_title') }}</p>
@@ -13,9 +12,8 @@
     @include('partials/entry-meta')
   </header>
   <div class="entry-content">
-    <div class="entry-content__image">
-      @php the_post_thumbnail( 'full' ) @endphp
-    </div>
+    @php $imageUrl = get_the_post_thumbnail_url(get_the_ID(), 'full') @endphp
+    <div class="entry-content__image" style="background-image: url('@php echo $imageUrl @endphp');"></div>
     <div class="entry-content__body">
       <div class="entry-content-body__share">
         <a href="https://www.facebook.com/sharer/" class="facebook" target="_blank"><i class="fa fa-facebook-f"></i></a>
