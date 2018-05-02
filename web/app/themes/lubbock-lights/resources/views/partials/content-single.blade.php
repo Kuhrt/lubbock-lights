@@ -23,6 +23,16 @@
       @php the_content() @endphp
     </div>
   </div>
+  <div class="entry-author">
+    @php $authorID = get_the_author_meta('ID') @endphp
+    @if (get_avatar( $authorID ))
+      <div class="entry-author__image" style="background-image: url('{{ get_avatar_url($authorID, array('size' => 335)) }}');"></div>
+    @endif
+    <div class="entry-author__info">
+      <h3>{{ get_the_author_meta('display_name') }}</h3>
+      <p>{{ get_the_author_meta('description') }}</p>
+    </div>
+  </div>
   <footer>
     {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
   </footer>

@@ -143,5 +143,53 @@ body.single-post {
         }
       }
     }
+
+    .entry-author {
+      position: relative;
+      background-color: $white;
+      padding: $page-margin;
+      margin-top: 2rem;
+
+      @media (min-width: $breakpoint-tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: $page-margin-tablet;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        padding: $page-margin-desktop;
+        margin-top: 4rem;
+      }
+
+      .entry-author__image {
+        position: relative;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 75%;
+        margin: 0 auto;
+
+        @media (min-width: $breakpoint-tablet) {
+          width: 33%;
+          max-width: 21rem;
+          margin: 0;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          position: relative;
+          width: 100%;
+          padding-top: 100%;
+        }
+      }
+
+      .entry-author__info {
+        @media (min-width: $breakpoint-tablet) {
+          width: 60%;
+        }
+      }
+    }
   }
 }
