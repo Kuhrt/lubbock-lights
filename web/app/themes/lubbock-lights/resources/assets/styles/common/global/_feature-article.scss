@@ -24,20 +24,24 @@ body.home {
       }
 
       .entry-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
+        @media (min-width: $breakpoint-desktop) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+        }
       }
 
       .entry-info {
-        position: relative;
-        background-color: $white;
-        width: 77.75%;
-        padding: 1.625rem;
-        z-index: 3;
+        @media (min-width: $breakpoint-desktop) {
+          position: relative;
+          background-color: $white;
+          width: 77.75%;
+          padding: 1.625rem;
+          z-index: 3;
+        }
 
         @media (min-width: $breakpoint-desktop-med) {
           width: 75%;
