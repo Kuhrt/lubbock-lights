@@ -65,6 +65,7 @@ body.home {
   @media (min-width: $breakpoint-desktop) {
     position: relative;
     display: flex;
+    align-items: flex-start;
     width: 100%;
     padding-left: $page-margin-desktop;
   }

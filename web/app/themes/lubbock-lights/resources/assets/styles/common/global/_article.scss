@@ -80,13 +80,8 @@ article {
         position: relative;
         background-color: $red;
         border-radius: 50%;
-        width: 1.875rem;
-        height: 1.875rem;
-
-        @media (min-width: $breakpoint-desktop) {
-          width: 4rem;
-          height: 4rem;
-        }
+        width: 1.75rem;
+        height: 1.75rem;
 
         & > div {
           display: block;

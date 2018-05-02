@@ -203,11 +203,6 @@ ul li {
     margin-top: 0;
     margin-bottom: 0.5rem;
 
-    @media (min-width: $breakpoint-desktop) {
-      font-size: 0.9167rem;
-      letter-spacing: 0.23867rem;
-    }
-
     &::after {
       content: '';
       position: absolute;
