@@ -135,6 +135,10 @@ body.single-post {
           margin-left: 5.875rem;
         }
 
+        @media (min-width: $breakpoint-desktop-med) {
+          max-width: 60rem;
+        }
+
         &:first-child {
           @media (min-width: $breakpoint-desktop) {
             text-indent: 2rem;

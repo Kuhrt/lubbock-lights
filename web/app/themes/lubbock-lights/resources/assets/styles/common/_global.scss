@@ -160,12 +160,12 @@ ul li {
   line-height: 1.875rem;
 
   @media (min-width: $breakpoint-desktop) {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 2rem;
   }
 
-  @media (min-width: $breakpoint-desktop-large) {
-    font-size: 1.5rem;
+  @media (min-width: $breakpoint-desktop-med) {
+    font-size: 1.75rem;
     line-height: 2.3rem;
   }
 
