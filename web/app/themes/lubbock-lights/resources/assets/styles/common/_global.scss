@@ -73,7 +73,7 @@ body {
   & > div,
   & > section {
     position: relative;
-    z-index: 2;
+    z-index: 3;
   }
 }
 
@@ -97,13 +97,12 @@ h1 {
   @media (min-width: $breakpoint-tablet) {
     font-size: 3.125rem;
     letter-spacing: 0.0045rem;
-    line-height: 2.719rem;
+    line-height: 1.1;
   }
 
   @media (min-width: $breakpoint-desktop) {
     font-size: 4rem;
     letter-spacing: 0.006rem;
-    line-height: 3.188rem;
   }
 }
 
@@ -115,13 +114,12 @@ h2 {
   @media (min-width: $breakpoint-tablet) {
     font-size: 2.25rem;
     letter-spacing: 0.004rem;
-    line-height: 2.1rem;
+    line-height: 1.1;
   }
 
   @media (min-width: $breakpoint-desktop) {
     font-size: 3rem;
     letter-spacing: 0.004rem;
-    line-height: 2.813rem;
   }
 }
 

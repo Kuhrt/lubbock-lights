@@ -1,9 +1,32 @@
 body.home {
   background: $white;
 
+  &::after {
+    content: '';
+    position: absolute;
+    top: 9rem;
+    left: 0;
+    background: linear-gradient(180deg, $grey 0%, $white 100%);
+    width: 100%;
+    height: 5rem;
+    z-index: 2;
+
+    @media (min-width: $breakpoint-tablet) {
+      top: 15rem;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      top: 32vw;
+    }
+  }
+
   div.content {
     @media (min-width: $breakpoint-desktop) {
       padding-top: $page-margin-desktop;
+    }
+
+    @media (min-width: $breakpoint-desktop-xl) {
+      padding-top: 10rem;
     }
   }
 
@@ -91,18 +114,19 @@ body.home {
       width: 47%;
     }
 
-    &:first-child {
+    &:first-child,
+    &:nth-child(2) {
       @media (min-width: $breakpoint-desktop) {
         width: 100%;
       }
 
       .entry-content__image {
         @media (min-width: $breakpoint-tablet) {
-          height: 22.5rem !important;
+          height: 32.5rem !important;
         }
 
         @media (min-width: $breakpoint-desktop) {
-          height: 32rem !important;
+          height: 42rem !important;
         }
       }
 

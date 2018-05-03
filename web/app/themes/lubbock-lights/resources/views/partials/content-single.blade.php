@@ -9,7 +9,6 @@
       </div>
     @endif
     <h1 class="entry-title">{{ get_the_title() }}</h1>
-    @include('partials/entry-meta')
   </header>
   <div class="entry-content">
     @php $imageUrl = get_the_post_thumbnail_url(get_the_ID(), 'full') @endphp

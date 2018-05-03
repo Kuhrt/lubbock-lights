@@ -14,7 +14,7 @@
   @endif
 
   <!-- FEATURE STORY -->
-  @php
+  <!-- @php
 		$args = array(
 			'post_type' => 'post',
       'category_name' => 'feature',
@@ -28,7 +28,7 @@
       @include('partials.content-feature')
     @endwhile
   @endif
-  @php wp_reset_query() @endphp
+  @php wp_reset_query() @endphp -->
 
   <div class="home__latest-grid">
     <!-- LATEST STORIES -->
@@ -39,8 +39,8 @@
       $theyDidThatCategoryID = get_cat_ID( 'They Did That' );
   		$args = array(
   			'post_type' => 'post',
-        'category__not_in' => array( $featureCategoryID, $theySaidThatCategoryID, $theyDidThatCategoryID ),
-  			'posts_per_page' => 7
+        'category__not_in' => array( $theySaidThatCategoryID, $theyDidThatCategoryID ),
+  			'posts_per_page' => 8
   		);
   		$the_query = new WP_Query( $args );
   	@endphp
