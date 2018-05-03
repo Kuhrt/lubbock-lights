@@ -212,7 +212,7 @@ header.banner {
   .brand {
     position: relative;
     display: block;
-    color: $black;
+    color: $red;
     font-family: $font-avenir;
     font-size: 2.7rem;
     font-weight: 700;
@@ -237,7 +237,7 @@ header.banner {
 
     span {
       display: block;
-      color: #7d7d7d;
+      color: $light-blue;
       font-family: $font-levato;
       font-size: 1.495rem;
       font-weight: 700;
