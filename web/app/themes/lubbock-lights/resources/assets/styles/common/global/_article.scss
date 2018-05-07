@@ -190,7 +190,7 @@ body.home {
       height: 13rem;
       margin-bottom: 1.125rem;
 
-      @media (min-width: $breakpoint-desktop) {
+      @media (min-width: $breakpoint-tablet) {
         height: 20rem;
       }
     }

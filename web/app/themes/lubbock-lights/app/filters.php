@@ -73,4 +73,4 @@ add_filter('comments_template', function ($comments_template) {
 /**
  * Removing admin bar from page
  */
-add_filter('show_admin_bar', '__return_false');
+// add_filter('show_admin_bar', '__return_false');

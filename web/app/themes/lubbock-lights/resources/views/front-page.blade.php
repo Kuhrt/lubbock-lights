@@ -61,7 +61,6 @@
 
   <!-- RECENT STORIES -->
   <section class="home__recent">
-    <h1 class="home__title">They Said That?</h1>
     @php
   		$args = array(
   			'post_type' => 'post',
@@ -73,6 +72,7 @@
     @if (have_posts())
       @while ($the_query->have_posts())
         @php $the_query->the_post() @endphp
+        <h1 class="home__title">@php echo get_the_category()[0]->cat_name @endphp?</h1>
         @include('partials.content-feature')
       @endwhile
     @endif
