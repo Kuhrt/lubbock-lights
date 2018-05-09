@@ -12,7 +12,7 @@ body.archive {
       padding: 0 $page-margin-tablet;
     }
 
-    @media (min-width: $breakpoint-desktop) {
+    @media (min-width: $breakpoint-tablet) {
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
@@ -35,9 +35,19 @@ body.archive {
     article {
       margin-bottom: 4rem;
 
-      @media (min-width: $breakpoint-desktop) {
+      @media (min-width: $breakpoint-tablet) {
         width: 48%;
         margin-bottom: $page-margin-desktop;
+      }
+
+      .entry-content__image {
+        @media (min-width: $breakpoint-tablet) {
+          height: 14rem;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+          height: 32rem;
+        }
       }
 
       .entry-category {
