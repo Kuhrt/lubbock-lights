@@ -25,7 +25,7 @@
   <div class="entry-author">
     @php $authorID = get_the_author_meta('ID') @endphp
     @if (get_avatar( $authorID ))
-      <div class="entry-author__image" style="background-image: url('{{ get_avatar_url($authorID, array('size' => 335)) }}');"></div>
+      <div class="entry-author__image" style="background-image: url('{{ GET_WP_USER_AVATAR_SRC($authorID, \'large\') }}');"></div>
     @endif
     <div class="entry-author__info">
       <h3>{{ get_the_author_meta('display_name') }}</h3>
