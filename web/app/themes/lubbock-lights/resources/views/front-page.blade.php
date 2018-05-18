@@ -39,8 +39,7 @@
       $theyDidThatCategoryID = get_cat_ID( 'They Did That' );
   		$args = array(
   			'post_type' => 'post',
-        'category__not_in' => array( $theySaidThatCategoryID, $theyDidThatCategoryID ),
-  			'posts_per_page' => 8
+        'category__not_in' => array( $theySaidThatCategoryID, $theyDidThatCategoryID )
   		);
   		$the_query = new WP_Query( $args );
   	@endphp
@@ -98,5 +97,4 @@
     </div>
   </section>
 
-  {!! get_the_posts_navigation() !!}
 @endsection

@@ -29,6 +29,7 @@ article {
   }
 
   .entry-content__image {
+    display: block;
     position: relative;
     background-position: center top;
     background-repeat: no-repeat;
@@ -116,6 +117,42 @@ article {
       position: relative;
       width: 100%;
       height: auto;
+    }
+
+    figure {
+      margin: 0 $page-margin $page-margin;
+
+      @media (min-width: $breakpoint-tablet) {
+        margin: 0 $page-margin-tablet $page-margin;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        margin: 0 $page-margin-tablet $page-margin-tablet;
+      }
+
+      &.alignleft {
+        margin-left: $page-margin;
+
+        @media (min-width: $breakpoint-tablet) {
+          margin-left: $page-margin-tablet;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+          margin-left: 5.875rem;
+        }
+      }
+
+      &.alignright {
+        margin-right: $page-margin;
+
+        @media (min-width: $breakpoint-tablet) {
+          margin-right: $page-margin-tablet;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+          margin-right: $page-margin-desktop;
+        }
+      }
     }
 
     h2,

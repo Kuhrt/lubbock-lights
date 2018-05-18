@@ -1,6 +1,3 @@
-<?php ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL); ?>
 <article @php post_class() @endphp>
   <header>
     @if (get_field('series_title'))
@@ -34,9 +31,13 @@ error_reporting(E_ALL); ?>
       <div class="entry-author__info">
         <h3>{{ get_the_author_meta('display_name') }}</h3>
         <p>{{ get_the_author_meta('description') }}</p>
+        <p><a href="{{ get_author_posts_url( get_the_author_meta( 'ID' ) ) }}">More by this author</a></p>
       </div>
     </div>
   @endif
+  <div class="related-posts">
+    @php dynamic_sidebar('related-posts') @endphp
+  </div>
   <footer>
     {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
   </footer>
