@@ -9,13 +9,6 @@
   .yarpp-related-widget {
     position: relative;
     width: 100%;
-
-    @media (min-width: $breakpoint-tablet-large) {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
   }
 
   h3 {
@@ -24,6 +17,9 @@
     margin-left: $page-margin;
 
     @media (min-width: $breakpoint-tablet) {
+      font-size: 2rem;
+      letter-spacing: 0.004rem;
+      line-height: 1.1;
       margin-left: $page-margin-tablet;
     }
 
@@ -67,17 +63,21 @@
     position: relative;
     width: 100%;
 
+    @media (min-width: $breakpoint-tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
     article {
       position: relative;
       padding: 0 $page-margin;
       margin-bottom: 2.75rem;
 
       @media (min-width: $breakpoint-tablet) {
+        width: 48%;
         padding: 0 $page-margin-tablet;
-      }
-
-      @media (min-width: $breakpoint-tablet-large) {
-        width: 50%;
       }
 
       @media (min-width: $breakpoint-desktop) {
@@ -90,7 +90,7 @@
       }
 
       .entry-content__image {
-        @media (min-width: $breakpoint-tablet-large) {
+        @media (min-width: $breakpoint-tablet) {
           height: 18rem;
         }
 
@@ -105,7 +105,7 @@
         h2.entry-title {
           margin-top: 0.5rem;
 
-          @media (min-width: $breakpoint-desktop) {
+          @media (min-width: $breakpoint-tablet) {
             font-size: 1.875rem;
             letter-spacing: 0.003rem;
             line-height: 1.1;

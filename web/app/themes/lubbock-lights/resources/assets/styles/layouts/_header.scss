@@ -242,13 +242,13 @@ header.banner {
       font-size: 1.495rem;
       font-weight: 700;
       letter-spacing: 0.05888rem;
+      line-height: 1.1;
       text-transform: none;
       margin-top: 0.5rem;
 
       @media (min-width: $breakpoint-tablet) {
         font-size: 2.2425rem;
         letter-spacing: 0.08832rem;
-        line-height: 1.2;
       }
 
       @media (min-width: $breakpoint-desktop) {
