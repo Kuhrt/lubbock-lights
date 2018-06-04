@@ -161,6 +161,20 @@ article {
     h5,
     h6 {
       font-family: $font-avenir;
+
+      @media (min-width: $breakpoint-tablet) {
+        margin-left: $page-margin-tablet;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        max-width: 50rem;
+        margin-right: auto;
+        margin-left: 5.875rem;
+      }
+
+      @media (min-width: $breakpoint-desktop-med) {
+        max-width: 60rem;
+      }
     }
 
     h2 {
@@ -187,6 +201,22 @@ article {
       &:first-child {
         padding-top: 2.375rem;
         margin-top: 0;
+      }
+    }
+
+    ul {
+      @media (min-width: $breakpoint-tablet) {
+        margin-left: $page-margin-tablet;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        max-width: 50rem;
+        margin-right: auto;
+        margin-left: 5.875rem;
+      }
+
+      @media (min-width: $breakpoint-desktop-med) {
+        max-width: 60rem;
       }
     }
 

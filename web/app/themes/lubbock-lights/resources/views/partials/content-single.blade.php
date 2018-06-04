@@ -9,6 +9,9 @@
       </div>
     @endif
     <h1 class="entry-title">{{ get_the_title() }}</h1>
+    @if (get_field('byline'))
+      <p class="byline author vcard">By {{ the_field('byline') }}</p>
+    @endif
   </header>
   <div class="entry-content">
     @php $imageUrl = get_the_post_thumbnail_url(get_the_ID(), 'full') @endphp

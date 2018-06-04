@@ -48,6 +48,42 @@ if (!class_exists('Roots\\Sage\\Container')) {
 }
 
 /**
+ * Setting up homepage widget
+ */
+function ll_add_dashboard_widgets() {
+	wp_add_dashboard_widget(
+                'll_support_dashboard_widget',         // Widget slug.
+                'Site Support',         // Title.
+                'll_dashboard_widget_function' // Display function.
+       );
+    // Globalize the metaboxes array, this holds all the widgets for wp-admin
+    global $wp_meta_boxes;
+
+    // Get the regular dashboard widgets array
+    // (which has our new widget already but at the end)
+    $normal_dashboard = $wp_meta_boxes['dashboard']['normal']['core'];
+
+    // Backup and delete our new dashboard widget from the end of the array
+    $ll_widget_backup = array( 'll_support_dashboard_widget' => $normal_dashboard['ll_support_dashboard_widget'] );
+    unset( $normal_dashboard['ll_support_dashboard_widget'] );
+
+    // Merge the two arrays together so our widget is at the beginning
+    $sorted_dashboard = array_merge( $ll_widget_backup, $normal_dashboard );
+
+    // Save the sorted array back into the original metaboxes
+    $wp_meta_boxes['dashboard']['normal']['core'] = $sorted_dashboard;
+}
+add_action( 'wp_dashboard_setup', 'll_add_dashboard_widgets' );
+/**
+* Create the function to output the contents of our Dashboard Widget.
+*/
+function ll_dashboard_widget_function() {
+    $widget_message = "<p>Here's a link to the documentation for your site: <a href='https://www.lubbocklights.com/wp-content/uploads/2018/06/lubbock-lights-documentation.pdf' target='_blank'>Site Documentation</a>. This document will show you how to use the features unique to your site. Enjoy your site!</p><p>Support Contact: <a href='mailto:kuhrt@kuhrt.codes'>Kuhrt Cowan</a> - <a href='tel:8062417788'>806.241.7788</a></p>";
+	// Display whatever it is you want to show.
+	echo $widget_message;
+}
+
+/**
  * Sage required files
  *
  * The mapped array determines the code library included in your theme.
